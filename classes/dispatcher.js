@@ -55,7 +55,7 @@ class Dispatcher {
 		// Get arguments in message.
 		const args = message.content.split(' ').slice(isMention ? 2 : 1).join(' ');
 
-		const pre = await message.channel.send('Generating Image <a:loadinggif:413460390996082689>');
+		const pre = await message.channel.send('Generating Image <a:loadinggif:413478596221599764>');
 
 		try {
 			// Run command.
