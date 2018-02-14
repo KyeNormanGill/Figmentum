@@ -29,10 +29,12 @@ module.exports = class StatsCommand extends Command {
 		ctx.fillRect(0, 0, 800, 200);
 
 		ctx.fillStyle = '#000000';
+		ctx.textAlign = 'center';
+		ctx.fillText('STATS', 200 / 2, 25);
 
+		ctx.textAlign = 'start';
 		for (let i = 0; i < stats.length; i++) {
-			ctx.fillText(stats[i], 25, 25 + (i * 10));
-			// 25, 25, 45, 55, 65
+			ctx.fillText(stats[i], 25, 50 + (i * 12));
 		}
 
 		return message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
