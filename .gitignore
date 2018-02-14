@@ -62,3 +62,6 @@ typings/
 
 # Personal configuration file
 config.json
+
+# Stupid unneeded shit that gets in the way 24/7
+package-lock.json
