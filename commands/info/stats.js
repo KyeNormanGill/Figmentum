@@ -11,15 +11,16 @@ module.exports = class StatsCommand extends Command {
 		});
 	}
 
-	run(message, args, pre) {
+	async run(message, args, pre) {
 		const canvas = createCanvas(300, 150);
 		const ctx = canvas.getContext('2d');
 
 		ctx.fillStyle = '#ffffff';
 		ctx.fillRect(0, 0, 800, 200);
+
 		ctx.fillStyle = '#000000';
 		ctx.fillText('Stats and stuff', 50, 50);
 
-		pre.edit({ files: [{ attachment: canvas.toBuffer() }] });
+		await pre.edit({ files: [{ attachment: canvas.toBuffer() }] });
 	}
 };
