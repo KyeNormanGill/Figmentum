@@ -21,6 +21,6 @@ module.exports = class StatsCommand extends Command {
 		ctx.fillStyle = '#000000';
 		ctx.fillText('Stats and stuff', 50, 50);
 
-		await pre.edit({ files: [{ attachment: canvas.toBuffer() }] });
+		await message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
 	}
 };
