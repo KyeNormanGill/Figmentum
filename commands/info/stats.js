@@ -13,7 +13,7 @@ module.exports = class StatsCommand extends Command {
 		});
 	}
 
-	run(message) {
+	async run(message) {
 		const canvas = createCanvas(200, 105);
 		const ctx = canvas.getContext('2d');
 
@@ -37,8 +37,6 @@ module.exports = class StatsCommand extends Command {
 			ctx.fillText(stats[i], 25, 40 + (i * 12));
 		}
 
-		setTimeout(() => {
-			return message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
-		}, 5000);
+		await message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
 	}
 };
