@@ -37,8 +37,6 @@ module.exports = class StatsCommand extends Command {
 			ctx.fillText(stats[i], 25, 40 + (i * 12));
 		}
 
-		await setTimeout(async() => {
-			await message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
-		}, 5000);
+		await message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
 	}
 };
