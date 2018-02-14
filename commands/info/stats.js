@@ -14,7 +14,7 @@ module.exports = class StatsCommand extends Command {
 	}
 
 	run(message) {
-		const canvas = createCanvas(200, 90);
+		const canvas = createCanvas(200, 100);
 		const ctx = canvas.getContext('2d');
 
 		const stats = [
