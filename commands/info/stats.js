@@ -34,7 +34,7 @@ module.exports = class StatsCommand extends Command {
 
 		ctx.textAlign = 'start';
 		for (let i = 0; i < stats.length; i++) {
-			ctx.fillText(stats[i], 25, 50 + (i * 12));
+			ctx.fillText(stats[i], 25, 40 + (i * 12));
 		}
 
 		return message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
