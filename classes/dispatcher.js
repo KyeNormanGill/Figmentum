@@ -59,7 +59,9 @@ class Dispatcher {
 
 		try {
 			// Run command.
-			await command.run(message, args, pre);
+			await command.run(message, args);
+
+			pre.delete();
 
 			// Emit commandRun event
 			message.client.emit('commandRun', command, message, args);
