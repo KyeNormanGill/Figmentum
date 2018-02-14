@@ -11,7 +11,7 @@ module.exports = class StatsCommand extends Command {
 		});
 	}
 
-	async run(message, args, pre) {
+	run(message, args, pre) {
 		const canvas = createCanvas(300, 150);
 		const ctx = canvas.getContext('2d');
 
@@ -21,6 +21,9 @@ module.exports = class StatsCommand extends Command {
 		ctx.fillStyle = '#000000';
 		ctx.fillText('Stats and stuff', 50, 50);
 
-		await message.channel.send({ files: [{ attachment: canvas.toBuffer() }] });
+		canvas.toBuffer((err, buffer) => {
+			if (err) pre.edit('Error with generating image!');
+			pre.edit({ files: [{ attachment: buffer }] });
+		});
 	}
 };
