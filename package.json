@@ -1,0 +1,24 @@
+{
+  "name": "figmentum",
+  "version": "1.0.0",
+  "description": "Discord bot made for generating images",
+  "main": "index.js",
+  "dependencies": {
+    "common-tags": "^1.7.2",
+    "discord.js": "github:hydrabolt/discord.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyeNormanGill/Figmentum.git"
+  },
+  "author": "Kye Norman-Gill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyeNormanGill/Figmentum/issues"
+  },
+  "homepage": "https://github.com/KyeNormanGill/Figmentum#readme"
+}
