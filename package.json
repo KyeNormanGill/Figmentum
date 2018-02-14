@@ -4,6 +4,7 @@
   "description": "Discord bot made for generating images",
   "main": "index.js",
   "dependencies": {
+    "canvas": "^2.0.0-alpha.9",
     "common-tags": "^1.7.2",
     "discord.js": "github:hydrabolt/discord.js"
   },
